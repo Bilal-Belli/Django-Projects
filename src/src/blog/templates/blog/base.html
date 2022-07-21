@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        {% if title %}
+        <title>{{title}}</title>
+        {% else %}
+        <title>Building App</title>
+        {% endif %}
     </head>
     <body>
        <header>
@@ -21,7 +26,7 @@
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="{% url 'about' %}">Link</a> <!-- pour le role du nom de path en urls.py-->
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

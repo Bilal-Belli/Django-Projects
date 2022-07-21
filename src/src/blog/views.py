@@ -25,3 +25,6 @@ def home(request):
         'posts': posts
     }
     return render(request ,'blog\index.html', context)
+
+def about(request):
+    return render(request ,'blog/about.html')
